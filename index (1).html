@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Статистика игровой индустрии · 2006 → 2026</title>
+<style>
+  :root {
+    --bg: #0e0f1a; --panel: #171827; --panel2: #1e2033; --text: #e8e9f3;
+    --muted: #9aa0b8; --accent: #7c5cff; --accent2: #00c2a8; --border: #2a2d45;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.6; }
+  header { padding: 40px 20px 10px; text-align: center; }
+  header h1 { font-size: clamp(1.6rem, 4vw, 2.6rem); background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  header p { color: var(--muted); margin-top: 8px; }
+  nav { position: sticky; top: 0; background: rgba(14,15,26,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 10px; text-align: center; z-index: 10; }
+  nav a { color: var(--muted); text-decoration: none; margin: 0 10px; font-size: 0.95rem; padding: 4px 8px; border-radius: 6px; }
+  nav a:hover { color: var(--text); background: var(--panel2); }
+  main { max-width: 980px; margin: 0 auto; padding: 20px; }
+  section { margin: 46px 0; }
+  h2 { font-size: 1.5rem; margin-bottom: 6px; border-left: 4px solid var(--accent); padding-left: 12px; }
+  h2 .em { filter: saturate(1.2); }
+  .sub { color: var(--muted); margin: 6px 0 18px 16px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 18px 0; }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
+  .card .num { font-size: 1.7rem; font-weight: 700; color: var(--accent2); }
+  .card .cap { color: var(--muted); font-size: 0.9rem; margin-top: 4px; }
+  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin: 16px 0; overflow-x: auto; }
+  .panel h3 { font-size: 1.05rem; margin-bottom: 12px; color: var(--text); }
+  .chart { width: 100%; height: auto; }
+  .chart-label { fill: #c8cbe0; font-size: 14px; }
+  .chart-value { fill: #ffffff; font-size: 14px; font-weight: 600; }
+  .chart-value.small { font-size: 12px; }
+  .chart-value.accent { fill: #00d1a7; }
+  .legend { fill: #9aa0b8; font-size: 13px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+  th { color: var(--muted); font-weight: 600; }
+  td b { color: var(--accent2); }
+  .note { background: rgba(124,92,255,0.08); border-left: 3px solid var(--accent); padding: 12px 16px; border-radius: 8px; color: var(--muted); font-size: 0.93rem; margin: 14px 0; }
+  ul.list { margin: 10px 0 10px 22px; }
+  ul.list li { margin: 8px 0; }
+  .src { font-size: 0.88rem; color: var(--muted); }
+  .src a { color: var(--accent2); text-decoration: none; word-break: break-all; }
+  .src a:hover { text-decoration: underline; }
+  footer { text-align: center; color: var(--muted); padding: 30px 10px; font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 40px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Статистика игровой индустрии</h1>
+  <p>Интерактивный дайджест к курсовой работе «Влияние компьютерных игр на мировую экономику»</p>
+</header>
+
+<nav>
+  <a href="#market">Рынок</a>
+  <a href="#then">2006 → 2026</a>
+  <a href="#jobs">Занятость</a>
+  <a href="#invest">Инвестиции</a>
+  <a href="#eco">Экосистема</a>
+  <a href="#sources">Источники</a>
+</nav>
+
+<main>
+
+<section id="market">
+  <h2><span class="em">📈</span> Рынок</h2>
+  <p class="sub">Выручка мирового рынка видеоигр, платформы и регионы</p>
+
+  <div class="cards">
+    <div class="card"><div class="num">$201,6 млрд</div><div class="cap">выручка мирового рынка в 2025 году (+9,1%)</div></div>
+    <div class="card"><div class="num">3,58 млрд</div><div class="cap">игроков в мире — около 61,5% населения планеты</div></div>
+    <div class="card"><div class="num">56%</div><div class="cap">доля мобильных игр в выручке индустрии</div></div>
+    <div class="card"><div class="num">$50,8 млрд</div><div class="cap">рынок США — второй после Китая</div></div>
+  </div>
+
+  <div class="panel">
+    <h3>Динамика выручки мирового рынка, млрд $</h3>
+    <svg viewBox="0 0 900 146" class="chart" role="img">
+<text x="198" y="23" text-anchor="end" class="chart-label">2023</text>
+<rect x="210" y="10" width="455.3" height="16" rx="6" fill="#7c5cff" opacity="0.9"/>
+<text x="675.2901023890785" y="23" class="chart-value">184 млрд $</text>
+<text x="198" y="57" text-anchor="end" class="chart-label">2024</text>
+<rect x="210" y="44" width="456.0" height="16" rx="6" fill="#7c5cff" opacity="0.9"/>
+<text x="676.0324232081912" y="57" class="chart-value">184.3 млрд $</text>
+<text x="198" y="91" text-anchor="end" class="chart-label">2025</text>
+<rect x="210" y="78" width="498.8" height="16" rx="6" fill="#00c2a8" opacity="0.9"/>
+<text x="718.839590443686" y="91" class="chart-value">201.6 млрд $</text>
+<text x="198" y="125" text-anchor="end" class="chart-label">2028 (прогноз)</text>
+<rect x="210" y="112" width="580.0" height="16" rx="6" fill="#4aa8ff" opacity="0.9"/>
+<text x="800.0" y="125" class="chart-value">234.4 млрд $</text>
+</svg>
+    <p class="note">После пандемийного пика рост затух (2024: всего +0,2%), но в 2025 году рынок впервые превысил $200 млрд. Прогнозы на 2028 год: $234,4 млрд (Newzoo) или $227,2 млрд (консервативная оценка).</p>
+  </div>
+
+  <div class="panel">
+    <h3>Выручка по платформам, 2025</h3>
+    <svg viewBox="0 0 900 112" class="chart" role="img">
+<text x="198" y="23" text-anchor="end" class="chart-label">Мобильные (56%)</text>
+<rect x="210" y="10" width="580.0" height="16" rx="6" fill="#00c2a8" opacity="0.9"/>
+<text x="800.0" y="23" class="chart-value">113.3 млрд $</text>
+<text x="198" y="57" text-anchor="end" class="chart-label">Консоли</text>
+<rect x="210" y="44" width="228.8" height="16" rx="6" fill="#7c5cff" opacity="0.9"/>
+<text x="448.8261253309797" y="57" class="chart-value">44.7 млрд $</text>
+<text x="198" y="91" text-anchor="end" class="chart-label">ПК</text>
+<rect x="210" y="78" width="223.2" height="16" rx="6" fill="#ffb454" opacity="0.9"/>
+<text x="443.19505736981466" y="91" class="chart-value">43.6 млрд $</text>
+</svg>
+  </div>
+
+  <div class="panel">
+    <h3>Рост выручки по регионам в 2025 году, %</h3>
+    <svg viewBox="0 0 900 180" class="chart" role="img">
+<text x="198" y="23" text-anchor="end" class="chart-label">Ближний Восток и Африка</text>
+<rect x="210" y="10" width="580.0" height="16" rx="6" fill="#00c2a8" opacity="0.9"/>
+<text x="800.0" y="23" class="chart-value">15 %</text>
+<text x="198" y="57" text-anchor="end" class="chart-label">Европа</text>
+<rect x="210" y="44" width="413.7" height="16" rx="6" fill="#7c5cff" opacity="0.9"/>
+<text x="633.7333333333333" y="57" class="chart-value">10.7 %</text>
+<text x="198" y="91" text-anchor="end" class="chart-label">АТР</text>
+<rect x="210" y="78" width="382.8" height="16" rx="6" fill="#7c5cff" opacity="0.9"/>
+<text x="602.8" y="91" class="chart-value">9.9 %</text>
+<text x="198" y="125" text-anchor="end" class="chart-label">Латинская Америка</text>
+<rect x="210" y="112" width="371.2" height="16" rx="6" fill="#7c5cff" opacity="0.9"/>
+<text x="591.2" y="125" class="chart-value">9.6 %</text>
+<text x="198" y="159" text-anchor="end" class="chart-label">Северная Америка</text>
+<rect x="210" y="146" width="220.4" height="16" rx="6" fill="#4aa8ff" opacity="0.9"/>
+<text x="440.4" y="159" class="chart-value">5.7 %</text>
+</svg>
+    <p class="note">Китай и США формируют более половины мировых расходов на видеоигры. Самые быстрорастущие рынки — Ближний Восток и Африка.</p>
+  </div>
+</section>
+
+<section id="then">
+  <h2><span class="em">⏳</span> 2006 → 2026</h2>
+  <p class="sub">Как выглядела индустрия двадцать лет назад</p>
+
+  <div class="panel">
+    <h3>Сравнение ключевых показателей (логарифмическая шкала)</h3>
+    <svg viewBox="0 0 900 340" class="chart" role="img">
+<line x1="60" y1="296" x2="880" y2="296" stroke="rgba(255,255,255,0.25)"/>
+<rect x="83.5" y="158.8" width="52.5" height="137.2" rx="5" fill="#8f7bff"/>
+<rect x="148.0" y="91.7" width="52.5" height="204.3" rx="5" fill="#00d1a7"/>
+<text x="109.8" y="150.8" text-anchor="middle" class="chart-value small">35,3</text>
+<text x="174.2" y="83.7" text-anchor="middle" class="chart-value small accent">201,6</text>
+<text x="142.0" y="318" text-anchor="middle" class="chart-label">Мировой рынок, млрд $</text>
+<rect x="247.5" y="221.1" width="52.5" height="74.9" rx="5" fill="#8f7bff"/>
+<rect x="312.0" y="144.7" width="52.5" height="151.3" rx="5" fill="#00d1a7"/>
+<text x="273.8" y="213.1" text-anchor="middle" class="chart-value small">7,0</text>
+<text x="338.2" y="136.7" text-anchor="middle" class="chart-value small accent">50,8</text>
+<text x="306.0" y="318" text-anchor="middle" class="chart-label">Продажи в США, млрд $</text>
+<rect x="411.5" y="296.0" width="52.5" height="0.0" rx="5" fill="#8f7bff"/>
+<rect x="476.0" y="113.9" width="52.5" height="182.1" rx="5" fill="#00d1a7"/>
+<text x="437.8" y="288.0" text-anchor="middle" class="chart-value small">1</text>
+<text x="502.2" y="105.9" text-anchor="middle" class="chart-value small accent">113,3</text>
+<text x="470.0" y="318" text-anchor="middle" class="chart-label">Мобильные, млрд $</text>
+<rect x="575.5" y="127.3" width="52.5" height="168.7" rx="5" fill="#8f7bff"/>
+<rect x="640.0" y="83.3" width="52.5" height="212.7" rx="5" fill="#00d1a7"/>
+<text x="601.8" y="119.3" text-anchor="middle" class="chart-value small">80</text>
+<text x="666.2" y="75.3" text-anchor="middle" class="chart-value small accent">250,8</text>
+<text x="634.0" y="318" text-anchor="middle" class="chart-label">Занятость в США, тыс.</text>
+<rect x="739.5" y="244.6" width="52.5" height="51.4" rx="5" fill="#8f7bff"/>
+<rect x="804.0" y="135.0" width="52.5" height="161.0" rx="5" fill="#00d1a7"/>
+<text x="765.8" y="236.6" text-anchor="middle" class="chart-value small">3,8</text>
+<text x="830.2" y="127.0" text-anchor="middle" class="chart-value small accent">65,5</text>
+<text x="798.0" y="318" text-anchor="middle" class="chart-label">Вклад в ВВП США, млрд $</text>
+<rect x="60" y="6" width="16" height="12" rx="3" fill="#8f7bff"/><text x="82" y="16" class="legend">2005–2006</text>
+<rect x="180" y="6" width="16" height="12" rx="3" fill="#00d1a7"/><text x="202" y="16" class="legend">2025–2026</text>
+</svg>
+  </div>
+
+  <div class="panel">
+    <h3>Таблица роста за 20 лет</h3>
+    <table>
+      <tr><th>Показатель</th><th>2005–2006</th><th>2025–2026</th><th>Рост</th></tr>
+      <tr><td>Мировой рынок</td><td>$35,3 млрд</td><td>$201,6 млрд</td><td><b>×5,7</b></td></tr>
+      <tr><td>Продажи игр в США</td><td>$7,0 млрд</td><td>$50,8 млрд</td><td><b>×7,3</b></td></tr>
+      <tr><td>Мобильные игры</td><td>&gt;$1 млрд</td><td>$113,3 млрд</td><td><b>&gt;×100</b></td></tr>
+      <tr><td>Занятость в США</td><td>80 тыс. чел.</td><td>250,8 тыс.</td><td><b>×3,1</b></td></tr>
+      <tr><td>Вклад в ВВП США</td><td>$3,8 млрд</td><td>$65,5 млрд</td><td><b>×17,2</b></td></tr>
+    </table>
+  </div>
+
+  <div class="panel">
+    <h3>Что изменилось качественно</h3>
+    <ul class="list">
+      <li><b>Не существовало:</b> Twitch (2011), Discord (2015), Xbox Game Pass (2017), модель батл-пасса (2018), облачный гейминг.</li>
+      <li><b>Консоли:</b> в 2006-м только анонсировались PS3 и Wii; сегодня доминируют PS5/Xbox Series и цифровые издания.</li>
+      <li><b>Прогноз того времени:</b> PwC ожидала рост мирового рынка лишь с $25,4 млрд (2004) до $54,6 млрд к 2009 году — реальность превзошла ожидания в разы.</li>
+      <li><b>В 2006-м ESA:</b> игры были дома у 69% американских семей; средняя зарплата разработчика в США — $92,3 тыс.</li>
+    </ul>
+    <p class="note">Интересный факт: быстрее всего вырос вклад отрасли в ВВП США (×17) — потому что в 2006 году учитывались только прямые и косвенные эффекты издателей, без современной «экосистемы» стриминга, рекламы и мероприятий.</p>
+  </div>
+</section>
+
+<section id="jobs">
+  <h2><span class="em">💼</span> Занятость</h2>
+  <p class="sub">Парадокс 2020-х: рекордная выручка при волне сокращений</p>
+
+  <div class="cards">
+    <div class="card"><div class="num">~45 тыс.</div><div class="cap">рабочих мест потеряно с 2022 по середину 2025 года</div></div>
+    <div class="card"><div class="num">250 838</div><div class="cap">рабочих мест поддержала отрасль в США в 2025 году</div></div>
+    <div class="card"><div class="num">11,8 тыс.</div><div class="cap">занятых в видеоигровой отрасли России в 2025 году (+11% за год)</div></div>
+    <div class="card"><div class="num">$65,5 млрд</div><div class="cap">вклад игровой отрасли в ВВП США в 2025 году</div></div>
+  </div>
+
+  <div class="panel">
+    <h3>Сокращения в игровой индустрии, тыс. человек</h3>
+    <svg viewBox="0 0 900 146" class="chart" role="img">
+<text x="198" y="23" text-anchor="end" class="chart-label">2023</text>
+<rect x="210" y="10" width="390.4" height="16" rx="6" fill="#ffb454" opacity="0.9"/>
+<text x="610.3846153846155" y="23" class="chart-value">10.5 тыс. чел.</text>
+<text x="198" y="57" text-anchor="end" class="chart-label">2024</text>
+<rect x="210" y="44" width="580.0" height="16" rx="6" fill="#ff5d73" opacity="0.9"/>
+<text x="800.0" y="57" class="chart-value">15.6 тыс. чел.</text>
+<text x="198" y="91" text-anchor="end" class="chart-label">2025</text>
+<rect x="210" y="78" width="342.1" height="16" rx="6" fill="#7c5cff" opacity="0.9"/>
+<text x="562.051282051282" y="91" class="chart-value">9.2 тыс. чел.</text>
+<text x="198" y="125" text-anchor="end" class="chart-label">2026 (11 мес.)</text>
+<rect x="210" y="112" width="409.0" height="16" rx="6" fill="#ff5d73" opacity="0.9"/>
+<text x="628.974358974359" y="125" class="chart-value">11 тыс. чел.</text>
+</svg>
+    <p class="note">Худший год — 2024 (до 15,65 тыс. сокращений). При этом совокупная занятость не падает: с 2022 года она выросла почти на 1% — рабочие места смещаются из США в Азиатско-Тихоокеанский регион (+10%), прежде всего благодаря Китаю.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Структура занятости в России (2025)</h3>
+    <ul class="list">
+      <li>Почти треть сотрудников — художники и аниматоры</li>
+      <li>Каждый пятый — геймдизайнер</li>
+      <li>16% — программисты</li>
+      <li>Около 80% занятых имеют высшее образование</li>
+      <li>Зарплаты гейм-дизайнеров за 2024 год выросли на 30–50% (конкуренция среди новичков — до 20 кандидатов на место)</li>
+    </ul>
+  </div>
+</section>
+
+<section id="invest">
+  <h2><span class="em">💰</span> Инвестиции</h2>
+  <p class="sub">Венчурный цикл: от перегрева к стабилизации</p>
+
+  <div class="panel">
+    <h3>Венчурное финансирование игровых стартапов, млрд $</h3>
+    <svg viewBox="0 0 900 180" class="chart" role="img">
+<text x="198" y="23" text-anchor="end" class="chart-label">2021</text>
+<rect x="210" y="10" width="580.0" height="16" rx="6" fill="#00c2a8" opacity="0.9"/>
+<text x="800.0" y="23" class="chart-value">9.9 млрд $</text>
+<text x="198" y="57" text-anchor="end" class="chart-label">2022</text>
+<rect x="210" y="44" width="392.5" height="16" rx="6" fill="#7c5cff" opacity="0.9"/>
+<text x="612.5252525252524" y="57" class="chart-value">6.7 млрд $</text>
+<text x="198" y="91" text-anchor="end" class="chart-label">2023</text>
+<rect x="210" y="78" width="117.2" height="16" rx="6" fill="#ff5d73" opacity="0.9"/>
+<text x="337.17171717171715" y="91" class="chart-value">2 млрд $</text>
+<text x="198" y="125" text-anchor="end" class="chart-label">Q3 2024</text>
+<rect x="210" y="112" width="47.5" height="16" rx="6" fill="#7c5cff" opacity="0.9"/>
+<text x="267.45454545454544" y="125" class="chart-value">0.81 млрд $</text>
+<text x="198" y="159" text-anchor="end" class="chart-label">Q1 2025</text>
+<rect x="210" y="146" width="21.7" height="16" rx="6" fill="#4aa8ff" opacity="0.9"/>
+<text x="241.67676767676767" y="159" class="chart-value">0.37 млрд $</text>
+</svg>
+    <p class="note">Пик — 2021 год ($9,9 млрд). Затем спад из-за нормализации ставок и переоценки стартапов. С 2024 года — стабилизация: сделки стало меньше, но чеки крупнее — инвесторы стали избирательнее.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Крупнейшие сделки</h3>
+    <ul class="list">
+      <li><b>Microsoft — Activision Blizzard:</b> $68,7 млрд (анонс — январь 2022), закрыта 13 октября 2023 года; с учётом согласований — $75,4 млрд. Самая дорогая сделка в истории игровой индустрии.</li>
+      <li><b>Savvy Games Group — Scopely:</b> $4,9 млрд (2023).</li>
+      <li><b>Tencent — Techland:</b> $1,5 млрд (2023).</li>
+      <li><b>Tencent — Supercell:</b> выкуп оставшихся долей за $8,6 млрд (2022).</li>
+      <li><b>Disney — Epic Games:</b> инвестиция $1,5 млрд (2024).</li>
+      <li><b>Mail.ru Group — ESforce:</b> $100 млн — кейс инвестиций в киберспортивную инфраструктуру России.</li>
+    </ul>
+    <p class="note">В 2023 году объём сделок M&A в секторе составил $85,1 млрд (+54,5% к 2022), но почти всё — заслуга сделки Microsoft. Без неё — лишь $16,7 млрд (−70%).</p>
+  </div>
+
+  <div class="panel">
+    <h3>Россия: частные инвесторы в геймдев</h3>
+    <ul class="list">
+      <li>К началу 2025 года — около 500 перспективных игровых проектов</li>
+      <li>Примеры раундов: 15 млн ₽ от 361 инвестора; 9,1 млн ₽ от 388 инвесторов</li>
+      <li>Типичный инвестор — предприниматель или менеджер с горизонтом возврата 2–5 лет</li>
+      <li>Российский игровой рынок 2024: 187 млрд ₽ (+6,1%); прогноз к 2030 — 257–327 млрд ₽</li>
+    </ul>
+  </div>
+</section>
+
+<section id="eco">
+  <h2><span class="em">🌍</span> Экосистема</h2>
+  <p class="sub">Косвенные эффекты: инфраструктура, реклама, образование, сообщества</p>
+
+  <div class="cards">
+    <div class="card"><div class="num">19,2 млрд</div><div class="cap">часов просмотров на Twitch в 2025 году</div></div>
+    <div class="card"><div class="num">676 млн</div><div class="cap">аудитория киберспорта в мире (2026)</div></div>
+    <div class="card"><div class="num">200+ млн</div><div class="cap">ежемесячно активных пользователей Discord</div></div>
+    <div class="card"><div class="num">$1,7 млрд</div><div class="cap">выплатило сообществу creators Roblox за 12 месяцев</div></div>
+  </div>
+
+  <div class="panel">
+    <h3>Технологии и инфраструктура</h3>
+    <ul class="list">
+      <li>NVIDIA контролирует ~90–94% рынка дискретных видеокарт — почти весь спрос исторически создают геймеры</li>
+      <li>Рынок геймерских видеокарт в России за 2025 год вырос на 30 млрд ₽, до 140 млрд ₽ (~1,7 млн штук)</li>
+      <li>Unreal Engine — основа виртуального продакшна («Мандалорец»), симуляторов, концертов и архитектуры</li>
+      <li>Для онлайн-игр задержка критична: шутеры — до 100 мс, MMORPG — до 500 мс; облачному геймингу нужны сети с пингом &lt;10 мс (5G)</li>
+      <li>Мировой релиз GTA 6 ожидается как доминирующий источник трафика в сетях на несколько суток</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h3>Реклама и маркетинг</h3>
+    <ul class="list">
+      <li>Рынок внутриигровой рекламы в США: $5 млрд (2022) → $7,5 млрд (2023) → $11,5 млрд к 2027 (IAB)</li>
+      <li>Глобальные оценки: от $8 млрд (2023) до $15,8 млрд (2026) в зависимости от методологии</li>
+      <li>Виртуальный концерт Трэвиса Скотта в Fortnite: 27,7 млн уникальных зрителей, 12,3 млн одновременно; заработок артиста ~$20 млн</li>
+      <li>Доверие к рекомендациям стримеров — 57% против 29% к актёрам кино</li>
+      <li>Российские стримеры зарабатывают на интеграциях до 3 млн ₽/мес; спонсорство киберспорта в мире — &gt;$634 млн (2025)</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h3>Образование</h3>
+    <ul class="list">
+      <li>Kahoot! улучшает результаты обучения в среднем на 0,72 стандартного отклонения (метаанализ 2024, 2000+ участников)</li>
+      <li>Minecraft Education используется в 40 000+ школьных систем в 140 странах</li>
+      <li>200+ университетов США содержат киберспортивные команды и выплачивают стипендии игрокам</li>
+      <li>В России киберспортивные направления развивают РГУФКС и ИТМО; проходит Всероссийская студенческая лига по киберспорту</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h3>Потребление и фанатская экономика</h3>
+    <ul class="list">
+      <li>Xbox Game Pass: от 10 млн подписчиков (2020) до 34 млн (2024)</li>
+      <li>Батл-пасс приносит проектам в среднем 5–10% прибыли; средняя цена — около $9</li>
+      <li>Лутбоксы приравнены к азартным играм в Бельгии (2018); Япония запретила «kompu gacha» ещё в 2012-м</li>
+      <li>Мировой рынок косплей-костюмов: $5,4 млрд (2024) → прогноз $9,8 млрд к 2033</li>
+      <li>Comic Con Russia и «Игромир» в 2019 году посетили 183+ тыс. человек за 4 дня</li>
+      <li>Discord: 150 млн пользуются голосовыми каналами ежемесячно; до 90% используют платформу не только для игр</li>
+    </ul>
+  </div>
+</section>
+
+<section id="sources">
+  <h2><span class="em">📎</span> Источники</h2>
+  <p class="sub">Основные данные сайта — из открытых источников</p>
+  <div class="panel src">
+    <ul class="list">
+      <li>Newzoo Global Games Market Report (через StopGame, Shazoo, 3DNews) — выручка рынка 2025, платформы, регионы, прогнозы</li>
+      <li>GamesIndustry.biz / App2top — итоги 2024 года</li>
+      <li>Т—Ж / Strategy Partners и РВИ — сценарный прогноз до 2030 года, рынок России</li>
+      <li>VoxBooster, Shazoo, IXBT Games — статистика увольнений</li>
+      <li>ESA (Entertainment Software Association) — занятость и ВВП США; исторические данные 2006 года</li>
+      <li>Агентство креативных индустрий Москвы / Компьютерра — занятость в России</li>
+      <li>InvestGame, Konvoy Ventures, Digital Business — венчурное финансирование и M&A</li>
+      <li>Skillbox Media, Википедия — сделка Microsoft–Activision Blizzard</li>
+      <li>CNews (2005) — исторические данные о рынке 2005 года</li>
+      <li>IAB, PwC, Market.us — внутриигровая реклама</li>
+      <li>Игромания, Афиша Daily, Dexerto — концерт Трэвиса Скотта в Fortnite</li>
+      <li>Jon Peddie Research, iXBT, CNews — рынок видеокарт</li>
+      <li>Ростелеком (данные Newzoo) — аудитория и трафик</li>
+      <li>VoxBooster, VenueLabs, РБК — Twitch, киберспорт</li>
+      <li>SciLead, RuStore, Minecraft Education, Газета.Ru — геймификация образования</li>
+      <li>Советский спорт, RB.ru, StopGame — киберспорт в образовании</li>
+      <li>Рувики, Чемпионат, УрФУ — Game Pass и батл-пассы</li>
+      <li>Journal of Digital Technologies and Law, ГРЧЦ — регулирование лутбоксов</li>
+      <li>ТАСС, GoHa — посещаемость «Игромира» и Comic Con</li>
+      <li>Verified Market Reports, Snob, РБК Тренды — косплей и коллекционирование</li>
+      <li>Полный список литературы (77 источников) — в тексте курсовой работы</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Сайт-приложение к курсовой работе · Все данные — из открытых источников · 2026
+</footer>
+
+</body>
+</html>
